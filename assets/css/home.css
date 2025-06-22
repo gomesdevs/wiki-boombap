@@ -1,0 +1,200 @@
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-3xl) var(--space-3xl) 80px;
+}
+
+.hero-section {
+    margin-bottom: var(--space-4xl);
+}
+
+.featured-album {
+    position: relative;
+    height: 320px; /* Aumentado para ficar mais proporcional */
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    cursor: pointer;
+    transition: transform var(--transition-normal);
+}
+
+.greeting {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.featured-album:hover {
+    transform: translateY(-4px);
+}
+
+.featured-album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.featured-album:hover img {
+    transform: scale(1.02);
+}
+
+.recently-played {
+    margin-top: var(--space-4xl);
+}
+
+.artists-grid {
+    display: grid;
+    /* Grid otimizado para 1920x1080 - cards maiores e melhor uso do espaço */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    /* Removida a limitação de largura para alinhar com o card em destaque */
+    width: 100%;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg); /* Aumentado o espaçamento interno */
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    padding: var(--space-lg); /* Padding maior para cards maiores */
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+}
+
+.artist-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.artist-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.artist-card:hover .artist-image img {
+    transform: scale(1.05);
+}
+
+.artist-name {
+    font-size: 16px; /* Fonte maior para cards maiores */
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.artist-card {
+    animation: fadeInUp var(--transition-slow) ease forwards;
+}
+
+.artist-card:nth-child(1) { animation-delay: 0.1s; }
+.artist-card:nth-child(2) { animation-delay: 0.2s; }
+.artist-card:nth-child(3) { animation-delay: 0.3s; }
+.artist-card:nth-child(4) { animation-delay: 0.4s; }
+.artist-card:nth-child(5) { animation-delay: 0.5s; }
+.artist-card:nth-child(6) { animation-delay: 0.6s; }
+.artist-card:nth-child(7) { animation-delay: 0.7s; }
+.artist-card:nth-child(8) { animation-delay: 0.8s; }
+.artist-card:nth-child(9) { animation-delay: 0.9s; }
+.artist-card:nth-child(10) { animation-delay: 1.0s; }
+
+/* Breakpoints específicos para diferentes resoluções */
+@media (min-width: 1440px) {
+    .artists-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 28px;
+    }
+    
+    .featured-album {
+        height: 360px;
+    }
+    
+    .greeting {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .artists-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: var(--space-xl) 20px 60px;
+    }
+
+    .greeting {
+        font-size: 32px;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    .featured-album {
+        height: 220px;
+    }
+
+    .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: var(--space-lg);
+    }
+    
+    .artist-card {
+        padding: var(--space-md);
+        gap: var(--space-md);
+    }
+    
+    .artist-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artists-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .greeting {
+        font-size: 24px;
+        bottom: 12px;
+        left: 12px;
+    }
+    
+    .featured-album {
+        height: 180px;
+    }
+}
