@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -73,7 +72,6 @@ body {
 .nav-links {
     display: flex;
     gap: var(--space-xl);
-    text-decoration: none;
 }
 
 .nav-links a {
@@ -81,12 +79,28 @@ body {
     font-weight: 500;
     font-size: 14px;
     transition: all var(--transition-fast);
+    position: relative;
     text-decoration: none;
 }
 
 .nav-links a:hover {
     color: var(--text-primary);
     transform: translateY(-1px);
+}
+
+.nav-links a.active {
+    color: var(--text-primary);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 1px;
 }
 
 .nav-right {
