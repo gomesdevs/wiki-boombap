@@ -40,6 +40,8 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     overflow-x: hidden;
+    overflow-y: auto;
+
 }
 
 .header {
@@ -53,6 +55,8 @@ body {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-secondary);
     z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-left {
