@@ -1,0 +1,391 @@
+.subscription-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4xl) var(--space-3xl);
+}
+
+.subscription-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-4xl);
+    max-width: 1200px;
+    width: 100%;
+    align-items: start;
+}
+
+.subscription-form-section {
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-header {
+    margin-bottom: var(--space-4xl);
+}
+
+.form-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.form-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xl);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    transition: all var(--transition-fast);
+    width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+    outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.password-toggle:hover {
+    color: var(--text-secondary);
+}
+
+.password-icon {
+    font-size: 16px;
+}
+
+.select-container {
+    position: relative;
+}
+
+.form-select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: var(--space-4xl);
+}
+
+.select-arrow {
+    position: absolute;
+    right: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: transform var(--transition-fast);
+}
+
+.form-select:focus + .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.submit-btn {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg) var(--space-4xl);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex: 1;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cancel-btn {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg) var(--space-4xl);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex: 1;
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.cancel-btn:active {
+    transform: translateY(0);
+}
+
+.subscription-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4xl);
+    padding-top: var(--space-4xl);
+}
+
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.info-link {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.info-link:hover {
+    color: var(--text-primary);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.social-link {
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.social-link:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+.copyright {
+    margin-top: auto;
+}
+
+.copyright p {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subscription-form-section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.subscription-info-section {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.form-group {
+    animation: fadeInUp 0.4s ease forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+
+.form-actions {
+    animation: fadeInUp 0.4s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .subscription-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-3xl);
+    }
+    
+    .subscription-info-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+    }
+    
+    .info-links {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .subscription-container {
+        padding: var(--space-xl) 20px;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .form-title {
+        font-size: 36px;
+    }
+    
+    .form-subtitle {
+        font-size: 14px;
+    }
+    
+    .subscription-form {
+        gap: var(--space-xl);
+    }
+    
+    .form-group {
+        gap: var(--space-xs);
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: var(--space-md);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        margin-top: var(--space-lg);
+    }
+    
+    .submit-btn,
+    .cancel-btn {
+        padding: var(--space-md) var(--space-xl);
+    }
+    
+    .subscription-info-section {
+        flex-direction: column;
+        gap: var(--space-xl);
+        align-items: flex-start;
+    }
+    
+    .info-links {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 28px;
+    }
+    
+    .subscription-form {
+        gap: var(--space-lg);
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+    
+    .social-links {
+        gap: var(--space-md);
+    }
+    
+    .social-link {
+        padding: var(--space-xs);
+    }
+}
