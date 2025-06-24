@@ -51,15 +51,15 @@
 
 .artists-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     width: 100%;
 }
 
 .artist-card {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     cursor: pointer;
     transition: all var(--transition-normal);
     padding: var(--space-lg);
@@ -129,8 +129,8 @@
 
 @media (min-width: 1440px) {
     .artists-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 28px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
     }
     
     .featured-album {
@@ -146,8 +146,8 @@
 
 @media (max-width: 1200px) {
     .artists-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
     }
 }
 
@@ -164,7 +164,7 @@
         height: 280px;
     }
     .artists-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--space-lg);
     }
     
@@ -192,5 +192,16 @@
     
     .featured-album {
         height: 240px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .artists-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+    }
+    
+    .artist-card {
+        padding: var(--space-md);
     }
 }
