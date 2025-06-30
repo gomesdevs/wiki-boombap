@@ -99,6 +99,7 @@
     font-weight: 600;
     color: var(--text-primary);
     text-align: left;
+    text-decoration: none;
 }
 
 @keyframes fadeInUp {
@@ -106,6 +107,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -116,27 +118,56 @@
     animation: fadeInUp var(--transition-slow) ease forwards;
 }
 
-.artist-card:nth-child(1) { animation-delay: 0.1s; }
-.artist-card:nth-child(2) { animation-delay: 0.2s; }
-.artist-card:nth-child(3) { animation-delay: 0.3s; }
-.artist-card:nth-child(4) { animation-delay: 0.4s; }
-.artist-card:nth-child(5) { animation-delay: 0.5s; }
-.artist-card:nth-child(6) { animation-delay: 0.6s; }
-.artist-card:nth-child(7) { animation-delay: 0.7s; }
-.artist-card:nth-child(8) { animation-delay: 0.8s; }
-.artist-card:nth-child(9) { animation-delay: 0.9s; }
-.artist-card:nth-child(10) { animation-delay: 1.0s; }
+.artist-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.artist-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.artist-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.artist-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.artist-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.artist-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.artist-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.artist-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.artist-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.artist-card:nth-child(10) {
+    animation-delay: 1.0s;
+}
 
 @media (min-width: 1440px) {
     .artists-grid {
         grid-template-columns: repeat(5, 1fr);
         gap: 25px;
     }
-    
+
     .featured-album {
         height: 500px;
     }
-    
+
     .greeting {
         font-size: 64px;
         bottom: 40px;
@@ -155,24 +186,27 @@
     .main-container {
         padding: var(--space-xl) 20px 60px;
     }
+
     .greeting {
         font-size: 36px;
         bottom: 20px;
         left: 20px;
     }
+
     .featured-album {
         height: 280px;
     }
+
     .artists-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-lg);
     }
-    
+
     .artist-card {
         padding: var(--space-md);
         gap: var(--space-md);
     }
-    
+
     .artist-name {
         font-size: 14px;
     }
@@ -183,13 +217,13 @@
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
     }
-    
+
     .greeting {
         font-size: 28px;
         bottom: 16px;
         left: 16px;
     }
-    
+
     .featured-album {
         height: 240px;
     }
@@ -200,7 +234,7 @@
         grid-template-columns: repeat(5, 1fr);
         gap: 16px;
     }
-    
+
     .artist-card {
         padding: var(--space-md);
     }
