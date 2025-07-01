@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/artist.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="nav-left">
@@ -27,8 +29,29 @@
         <button class="login-btn">Login</button>
       </a>
       <img src="../../src/images/Home/meninhos.jpg" alt="Avatar" class="avatar">
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-links">
+      <a href="../../index.html">Home</a>
+      <a href="donation.html">Suporte</a>
+      <a href="download.html">Baixe Aqui</a>
+    </div>
+    <div class="mobile-search-container">
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search">
+      </div>
+    </div>
+    <a href="subscription.html" class="mobile-login-btn">Login</a>
+  </nav>
 
   <main class="container">
     <section class="artist-profile">
@@ -47,7 +70,7 @@
         <a href="#about-content">Sobre</a>
       </nav>
 
-      <div class="content-section">
+      <div id="popular-content" class="content-section">
         <h2 class="section-title">Popular</h2>
         <div class="grid">
           <div class="grid-item">
@@ -77,7 +100,7 @@
         </div>
       </div>
 
-      <div class="content-section">
+      <div id="discography-content" class="content-section">
         <h2 class="section-title">Discografia</h2>
         <div class="grid">
           <div class="grid-item">
@@ -93,13 +116,19 @@
         </div>
       </div>
 
-      <div class="content-section">
+      <div id="about-content" class="content-section">
         <h2 class="section-title">Sobre</h2>
         <p class="bio">
-          DeanBlue é um rapper, compositor e produtor underground nascido e criado no subúrbio da Baixada Fluminense, Rio de Janeiro. Com apenas 16 anos entrou no mundo da música. Com uma identidade sonora autêntica e marcante, ele transforma suas vivências, o cotidiano e os sentimentos internos em rimas que ressoam com seu público.
+          DeanBlue é um rapper, compositor e produtor underground nascido e criado no subúrbio da Baixada Fluminense,
+          Rio de Janeiro. Com apenas 16 anos entrou no mundo da música. Com uma identidade sonora autêntica e marcante,
+          ele transforma suas vivências, o cotidiano e os sentimentos internos em rimas que ressoam com seu público.
         </p>
       </div>
     </section>
   </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/app.js"></script>
 </body>
+
 </html>

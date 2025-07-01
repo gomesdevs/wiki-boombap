@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowWiki - Hip-Hop & Boombap</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="stylesheet" href="assets/css/normalize.css">
+    <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/home.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="src/images/favicon.png">
 </head>
+
 <body>
     <header id="header" class="header">
         <div class="nav-left">
@@ -26,14 +28,35 @@
                 <input type="text" class="search-input" placeholder="Search">
             </div>
             <a href="assets/pages/subscription.html">
-            <button class="login-btn">Login</button>
+                <button class="login-btn">Login</button>
             </a>
             <img src="src/images/Home/meninhos.jpg" alt="Avatar" class="avatar">
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main id="main"" class="main-container">
-       <section class="hero-section">
+    <!-- Mobile Navigation Overlay -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="#main" class="active">Home</a>
+            <a href="assets/pages/donation.html">Suporte</a>
+            <a href="assets/pages/download.html">Baixe Aqui</a>
+        </div>
+        <div class="mobile-search-container">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+        </div>
+        <a href="assets/pages/subscription.html" class="mobile-login-btn">Login</a>
+    </nav>
+
+    <main id="main" class="main-container">
+        <section class="hero-section">
             <div class="featured-album">
                 <img src="src/images/Home/febre90.jpg" alt="Featured Album">
                 <h1 class="greeting">Boa Tarde</h1>
@@ -44,88 +67,92 @@
             <h2 class="section-title">Tocados Recentemente</h2>
             <div class="artists-grid">
                 <a href="assets/pages/DeanBlue.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/Deanblue.jpeg" alt="DeanBlue">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/Deanblue.jpeg" alt="DeanBlue">
+                        </div>
+                        <div class="artist-name">DeanBlue</div>
                     </div>
-                    <div class="artist-name">DeanBlue</div>
-                </div>
                 </a>
                 <a href="assets/pages/Leall.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Leal/LEAL.jpg" alt="LEALL">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Leal/LEAL.jpg" alt="LEALL">
+                        </div>
+                        <div class="artist-name">LEALL</div>
                     </div>
-                    <div class="artist-name">LEALL</div>
-                </div>
                 </a>
                 <a href="assets/pages/BK.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/BK.jpg" alt="BK">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/BK.jpg" alt="BK">
+                        </div>
+                        <div class="artist-name">BK</div>
                     </div>
-                    <div class="artist-name">BK</div>
-                </div>
                 </a>
                 <a href="assets/pages/Febem.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Febem/FebemPerfil.jpg" alt="Febem">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Febem/FebemPerfil.jpg" alt="Febem">
+                        </div>
+                        <div class="artist-name">Febem</div>
                     </div>
-                    <div class="artist-name">Febem</div>
-                </div>
                 </a>
                 <a href="assets/pages/FBC.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/FBC.jpeg" alt="FBC">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/FBC.jpeg" alt="FBC">
+                        </div>
+                        <div class="artist-name">FBC</div>
                     </div>
-                    <div class="artist-name">FBC</div>
-                </div>
                 </a>
                 <a href="assets/pages/CaioOcean.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/caioocean.jpg" alt="Caio Ocean">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/caioocean.jpg" alt="Caio Ocean">
+                        </div>
+                        <div class="artist-name">Caio Ocean</div>
                     </div>
-                    <div class="artist-name">Caio Ocean</div>
-                </div>
                 </a>
                 <a href="assets/pages/Pumapjl.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/pumapjl.jpg" alt="pumapjl">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/pumapjl.jpg" alt="pumapjl">
+                        </div>
+                        <div class="artist-name">PumaPjl</div>
                     </div>
-                    <div class="artist-name">PumaPjl</div>
-                </div>
                 </a>
                 <a href="assets/pages/Alee.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Home/Alee.jpg" alt="Alee">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Home/Alee.jpg" alt="Alee">
+                        </div>
+                        <div class="artist-name">Alee</div>
                     </div>
-                    <div class="artist-name">Alee</div>
-                </div>
                 </a>
                 <a href="assets/pages/Sain.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Sain/Sain.jpg" alt="Saín">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Sain/Sain.jpg" alt="Saín">
+                        </div>
+                        <div class="artist-name">Sain</div>
                     </div>
-                    <div class="artist-name">Sain</div>
-                </div>
                 </a>
                 <a href="assets/pages/Djonga.html">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="src/images/Djonga/Djonga.jpg" alt="Djonga">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="src/images/Djonga/Djonga.jpg" alt="Djonga">
+                        </div>
+                        <div class="artist-name">Djonga</div>
                     </div>
-                    <div class="artist-name">Djonga</div>
-                </div>
                 </a>
             </div>
-        
+
         </section>
     </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 .container {
     padding-top: var(--space-4xl);
 }
@@ -99,6 +98,13 @@
 
 .content-section {
     margin-bottom: var(--space-4xl);
+    display: none;
+    /* Hide all sections by default */
+}
+
+/* Show the first section (Popular) by default */
+.content-section:first-of-type {
+    display: block;
 }
 
 .section-title {
